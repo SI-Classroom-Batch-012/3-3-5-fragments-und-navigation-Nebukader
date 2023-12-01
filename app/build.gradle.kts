@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
+
 }
 
 android {
@@ -8,9 +10,9 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.filamentresignmanager"
+        applicationId = "com.example.notizapp"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -19,6 +21,7 @@ android {
     buildFeatures{
         viewBinding = true
     }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -46,4 +49,8 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
+    androidTestImplementation ("androidx.navigation:navigation-testing:$2.7.5")
 }

@@ -1,7 +1,6 @@
 package com.example.filamentresignmanager.ui.adapter.model.data
-
-import com.example.filamentresignmanager.R
 import com.example.filamentresignmanager.adapter.model.data.Resin
+import com.example.filamentresignmanager.R
 
 class Datasource {
     fun loadResins(): MutableList<Resin> {
@@ -32,7 +31,8 @@ class Datasource {
                 exposureTime = "3 seconds",
                 firstLayerTime = "60 seconds",
                 image = R.drawable.jayo_abs_like_black
-            ),
             )
+        )
+
     }
 }
