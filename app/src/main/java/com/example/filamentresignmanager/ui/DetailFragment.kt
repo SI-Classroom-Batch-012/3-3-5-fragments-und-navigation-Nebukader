@@ -12,7 +12,7 @@ import com.example.filamentresignmanager.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
 
-    private lateinit var binding: FragmentDetailBinding
+
 
     val args:DetailFragmentArgs by navArgs()
 
@@ -31,7 +31,7 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        var binding: FragmentDetailBinding = FragmentDetailBinding.bind(view)
         val postion =args.position
         val mainActivity = activity as MainActivity
         val data = mainActivity.resins[postion]
